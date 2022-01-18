@@ -22,16 +22,25 @@ function fonctionCalcul(a, b) {
     if (typeof a == 'number' && typeof b == 'number'()) {
         resultat = a * b + a + b;
     }
-    else resultat = "Rentrez des nombres SVP";
+    //else resultat = "Rentrez des nombres SVP";
+    else throw 'Rentrez des nombres SVP';
     return resultat;
 }
-console.log(fonctionCalcul("deux", "trois") + "\n");
+try {
+    console.log(fonctionCalcul("deux", "trois") + "\n");
+    
+} catch (error) {
+    console.log(error);
+}
+
 
 function fonctionControleTableau(array) {
     let check = true;
     if  (array.length==0){
-        check="le tableau est vide";
-    }else{
+        //check="le tableau est vide";
+        throw "le tableau est vide";
+    }else
+    {
     for (let i = 0; i < array.length; i++) {
         if (typeof array[i] !== 'number') {
             check = false;
@@ -41,15 +50,33 @@ function fonctionControleTableau(array) {
     return check;
 }
 
-
 let unTableau = [1, 15, -3, 0, 8, 7, 4, -2, 28, 7, -1, 17, 2, 3, 0, 14, -4];
-console.log(fonctionControleTableau(unTableau));
+try {
+    console.log(fonctionControleTableau(unTableau));
+} catch (error) {
+    console.log(console.error);
+}
+
 
 let unSecondTableau = [1, 15, -3, 0, 8, 7, "trois", -2, 28, 7, -1, 17, 2, 3, 0, 14, -4];
-console.log(fonctionControleTableau(unSecondTableau));
+
+try {
+    console.log(fonctionControleTableau(unSecondTableau)); 
+} catch (error) {
+    console.log(console.error);
+}
+
 
 let unTroisiemeTableau = [];
-console.log(fonctionControleTableau(unTroisiemeTableau));
+
+try {
+    console.log(fonctionControleTableau(unTroisiemeTableau));
+} catch (error) {
+    console.log(console.error);
+    
+}
+
+
 
 function moyenne(array) {
     let moyenne = 0;
