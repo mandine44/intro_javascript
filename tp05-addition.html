@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function additionner() {
+
+            let n1 = (document.getElementById('nombre1')).value;
+            let n2 = (document.getElementById('nombre2')).value;
+
+            let n1Conv =parseInt(n1);
+            let n2Conv =parseInt(n2);
+
+            let somme = n1Conv + n2Conv;
+
+            let resultat = document.querySelector("#resultat");
+            resultat.innerHTML = somme;
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <p>nombre 1</p>
+    <input type="text" id="nombre1">
+
+    <p>nombre 2</p>
+    <input type="text" id="nombre2">
+
+    <input type="button" value="additionner" onclick="additionner()">
+
+    <section id="resultat">0</section>
+
+
+
+</body>
+
+</html>

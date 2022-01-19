@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    function operation() {
+
+        let n1 = (document.getElementById('nombre1')).value;
+        let n2 = (document.getElementById('nombre2')).value;
+
+        let op= (document.getElementById('selectionOperation')).value;
+
+        let n1Conv =parseInt(n1);
+        let n2Conv =parseInt(n2);
+
+        let resultat = document.querySelector("#resultat");
+        let res;
+        
+
+        switch(op){
+            case '+':
+             res=n1Conv+n2Conv;
+             break;
+
+             case '-':
+             res=n1Conv-n2Conv;
+             break;
+
+             case '*':
+             res=n1Conv*n2Conv;
+             break;
+
+             case '/':
+             res=n1Conv/n2Conv;
+             break;
+            
+        }
+        let msg= "le resultat de l'operation est: "+res;
+        resultat.innerHTML = msg;
+    }
+</script>
+</head>
+<body>
+    <p>nombre 1</p>
+    <input type="text" id="nombre1">
+
+    <p>nombre 2</p>
+    <input type="text" id="nombre2">
+
+    <br><br>
+    <select id="selectionOperation" multiple>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <br><br>
+
+    <input type="button" value="lancer l'opération" onclick="operation()">
+
+    <section id="resultat">0</section>
+</body>
+</html>
