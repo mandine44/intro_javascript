@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="tp06-creationFormulaire.js"></script>
+    <title>Creation formulaire</title>
+</head>
+
+<body onload="init()">
+    <div class="container">
+
+        <div id="resultat"></div>
+
+       <form action="https://digicode.cleverapps.io/utilisateurs" method="POST">
+       
+        <p>Nom</p><input type="text" id="nom" name="nom">
+        <p>Prenom</p><input type="text" id="prenom" name="prenom">
+        <p>Date de naissance</p><input type="text" id="dateNaissance" name="dateNaissance">
+        <p>Lieu de naissance</p><input type="text" id="lieuNaissance" name="lieuNaissance">
+        <p>Département</p><input type="text" id="departementNaissance" name="departementNaissance">
+        <p>Numéro de rue</p><input type="text" id="numeroRue" name="numeroRue">
+        <p>Libellé de rue</p><input type="text" id="libelleRue" name="libelleRue">
+        <p>Code postal</p><input type="text" id="codePostal" name="codePostal">
+        <p>Ville</p><input type="text" id="ville" name="ville">
+
+        <input type="button" onclick="valider()" value="valider">
+      </form>
+    </div>
+</body>
+
+</html>
